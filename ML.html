@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- load script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>MarkTension</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/icons/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- title
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+    <!-- welcome ––––––––––––––––––––––––– -->
+    <div class="row" align="right" style="margin-top:5%;margin-bottom:0%;">
+        <a id="link2" href= "index.html"><h3>MarkTension</h3></a>
+
+    </div>
+    <div class="row">
+      <div class="twelve columns fade" style="margin-top: 5%">
+        <center><img style="margin-bottom:0%" src="images/intro/actmax0.png" alt="icon" width="20%">
+          <img style="margin-bottom:2%" class="dimmed" src="images/intro/actmax5.png" alt="icon" width="20%" opacity="0.5">
+          <img style="margin-bottom:6%" class="dimmed" src="images/intro/actmax2.png" alt="icon" width="20%";><center>
+
+      </div>
+    </div>
+
+
+    <!-- menu row  –––––––––––––––––––––––––  -->
+     <div class="row" >
+
+      <!-- photo  ––––––––––––––––––––––––– -->
+      <div class="four columns fade" > <center> <a id="link" href= "ML.html"> <h4 style="margin-top:15%" >MachineLearning </br> Adventures</h4> </a> </center>
+      </div>
+
+    <!--  music ––––––––––––––––––––––––– -->
+      <div class="four columns fade" > <center> <a id="link" href= "Illustrations.html"> <h4 style="margin-top:10%">Illustrations</h4> </a></center>
+      </div>
+
+    <!-- word –––––––––––––––––––––-–––– -->
+    <div class="four columns fade" > <center> <a id="link" href= "Photography.html"> <h4 style="margin-top:0%">Photography</h4> </a></center>
+    </div>
+    </div>
+    <div class=" twelve columns" >
+      <div class="six columns">
+        <h5 > 2D & 3D sculpting with Unity </h5>
+        <h6 style="margin-top:0%;align:justify;">
+          As a resident ML-researcher/artist at Onformative, Berlin, I'm working on a 3D sculpting project in Unity3D.
+          The idea is using reinforcement learning, enabled in Unity via its ml-agents library.
+          The first stage is using a 2D environment to get the technique down.
+          We're using an agent that gets a 2D input surrounding itself, which is a partial observation of the entire gridspace.
+          It needs to make a target shape by adding, or deleting pixels that it needs to navigate to.
+</br>
+</br>
+          The final idea is for people to witness real-time sculpting where it's about observing the agent intelligently going about its job, using and experimenting different tools.
+          The different tools will allow different aesthetics to form, just like how different media for artsist result in different aesthetics.
+        </br>
+        </br>
+          The second stage is going 3D. To the right is a little teaser o that.
+        </h6>
+      </div>
+      <div class="six colums">
+        <img style="margin-top:7%" src="images/ML/artartart.gif" width="50%" alt="hello">
+        <img style="margin-top:7%" src="images/ML/Clay2DGameView.gif" width="20%" alt="hello">
+        <img style="margin-top:7%" src="images/ML/betterGiph.gif" width="30%" alt="hello">
+
+      </div>
+    </div>
+    <div class=" twelve columns" >
+      <div class="six columns">
+        <h5 > Visualizing image recogntion models' representations </h5>
+        <h6 style="margin-top:0%;align:justify;">
+          The biggest critique and scare of the usage of <a href="https://en.wikipedia.org/wiki/Deep_learning">deep neural networks</a> is that we don't know how exactly they compute.
+          They're being called black models for that reason.
+          Various attempts have been made to get a better understanding of it, by presenting images, and visualizing the representations in different layers.
+          One other way to do this is synthesizing input images by using gradient-ascent to maximise classification score on a selected class, filter, or neuron.
+          This is called <a href="https://pdfs.semanticscholar.org/65d9/94fb778a8d9e0f632659fb33a082949a50d3.pdf">Activation Maximization</a>.
+          To play with that, I used CIFAR10 to train a CNN and applied activatin maximization on it.
+          </br></br>
+          My results are visualizations of maximizing the classification of specific classes on Cifar10.
+          I did get some good ones that looked like the various categories I was trying to visualize.
+          However, after playing a bit more with it I got some unexpected results, displayed on the right.
+          </br></br>
+
+          A lot of the work is playing with different regularization techniques on updates to the synthetic input image.
+          Stronger natural image priors are necessary to produce better visualizations with this gradient ascent techinuqe.
+          my playing around means adjusting the amount of the regularizations available.
+          L2 regularization helped a lot, but I found that higher degrees of gaussian regularization (used in <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Mahendran_Understanding_Deep_Image_2015_CVPR_paper.html">this paper</a> to correlate pixels more with another)
+          gave a really cool aesthetic to the output. It's all about finding the balance.
+          My results were a bit overdone on the regularization-end.
+          Yet, quite surprising how the results turned out so unenlightening visualization-wise, but so beautiful.
+          I think there's more to explore in this area with other regularization techniques.
+          It'd also be cool to visualize how the images change when updating, and changing to different classes.
+        </h6>
+      </div>
+      <div class="six colums">
+        <img style="margin-top:7%" src="images/intro/actmax0.png" width="15%" alt="hello">
+        <img style="margin-top:2%" src="images/intro/actmax3.png" width="15%" alt="hello">
+        <img style="margin-top:2%" src="images/intro/actmax4.png" width="15%" alt="hello">
+      </div>
+
+    <div class=" twelve columns" >
+      <div class="six columns">
+        <h5 > Reinforcement Learning / Neural Architecture Search </h5>
+        <h6 style="margin-top:0%;align:justify;">
+          For two semesters I did neuroscience/Machine-Learning research at MIT’s <a href="http://dicarlolab.mit.edu/">DiCarlo lab</a>. They specialise in a computational model approach to study the brain’s visual system. I was Supervised by prof. J. DiCarlo, dr. P. Bashivan and dr. J. Kubilius, in two projects:
+          </br></br>
+          One project was about using Neural Architecture Search for finding more brain-like models (<a href="https://arxiv.org/abs/1808.01405">Teacher Guided Architecture Search</a>). The idea is using Neural Architecture search to construct convolutional neural network architectures closer to the brain’s 'architecture'.
+          This can be done by comparing the representations of visual input at various depths in the brain and model using <a href="https://www.mrc-cbu.cam.ac.uk/people/nikolaus.kriegeskorte/rsa/">Representational dissimilarity matrices</a>.
+          Putting the simmilarity in the objective function steers the search into sampling more neural-like models.
+          Here I learned and research a ton about reinforcement learning, by testing and implementing state of the art reinforcement learning optimisation algorithms (<a href="https://openai.com/blog/openai-baselines-ppo/">PPO</a>, and <a href="https://link.springer.com/article/10.1007/BF00992696"> REINFORCE</a>) to make the search more efficient.
+          </br></br>
+          The other project was using Neural Architecture Search for finding and analysing recurrent, and efficient cells for object recognition.
+          This project was designed to steer the search into more parameter-sparse models by rewarding parameter sparsity in the optimizer's objective function.
+          The model space we searched in were Cells of recurrent models (RNNs) for image recognition. Common implementations of these cells are <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM and GRU cells</a>.
+        </h6>
+      </div>
+      <div class="six colums">
+        <img style="margin-top:7%" src="images/ML/sage.png" width="50%" alt="hello">
+        <img style="margin-top:2%" src="images/ML/GrassResearc.png" width="50%" alt="hello">
+      </div>
+    </div>
+
+  </div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
