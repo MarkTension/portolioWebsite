@@ -109,9 +109,9 @@
       <div class="six columns">
         <h5 > Visualizing image recogntion models' representations </h5>
         <h6 style="margin-top:0%;align:justify;">
-          The biggest critique and scare of the usage of <a href="https://en.wikipedia.org/wiki/Deep_learning">deep neural networks</a> is that we don't know how exactly they compute.
-          They're being called black box models for that reason.
-          Various attempts have been made to get a better understanding of it, by presenting images, and visualizing the representations in different layers.
+          The biggest critique of using <a href="https://en.wikipedia.org/wiki/Deep_learning">deep neural networks</a> as models in science is that we don't know how exactly they compute.
+          They're being called black box models for that reason. e.g. understanding a black box like the brain with another black box is not useful.
+          However, various attempts have been made to get a better understanding of it, by presenting images, and visualizing the representations in different layers.
           One other way to do this is synthesizing input images by using gradient-ascent to maximise classification score on a selected class, filter, or neuron.
           This is called <a href="https://pdfs.semanticscholar.org/65d9/94fb778a8d9e0f632659fb33a082949a50d3.pdf">Activation Maximization</a>.
           To play with that, I used CIFAR10 to train a CNN and applied activatin maximization on it.
@@ -122,14 +122,13 @@
           </br></br>
 
           A lot of the work is playing with different regularization techniques on updates to the synthetic input image.
-          Stronger natural image priors are necessary to produce better visualizations with this gradient ascent techinuqe.
-          my playing around means adjusting the amount of the regularizations available.
+          Stronger natural image priors are necessary to produce better visualizations with this gradient ascent technique.
+          Playing around means adjusting the amount of the regularizations available.
           L2 regularization helped a lot, but I found that higher degrees of gaussian regularization (used in <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Mahendran_Understanding_Deep_Image_2015_CVPR_paper.html">this paper</a> to correlate pixels more with another)
           gave a really cool aesthetic to the output. It's all about finding the balance.
-          My results were a bit overdone on the regularization-end.
-          Yet, quite surprising how the results turned out so unenlightening visualization-wise, but so beautiful.
-          I think there's more to explore in this area with other regularization techniques.
-          It'd also be cool to visualize how the images change when updating, and changing to different classes.
+          My results were a bit overdone on the regularization-end.</br></br>
+          I was quite surprised how the results didn't contain any strong features of the category they represented, yet they're rather beautiful.
+          Another way to describe this is making <a href="https://openai.com/blog/adversarial-example-research/">adversarials</a> pretty.
         </h6>
       </div>
       <div class="six colums">
@@ -138,27 +137,43 @@
         <img style="margin-top:2%" src="images/intro/actmax4.png" width="15%" alt="hello">
       </div>
 
-    <div class=" twelve columns" >
-      <div class="six columns">
-        <h5 > Reinforcement Learning / Neural Architecture Search </h5>
-        <h6 style="margin-top:0%;align:justify;">
-          For two semesters I did neuroscience/Machine-Learning research at MIT’s <a href="http://dicarlolab.mit.edu/">DiCarlo lab</a>. They specialise in a computational model approach to study the brain’s visual system. I was Supervised by prof. J. DiCarlo, dr. P. Bashivan and dr. J. Kubilius, in two projects:
-          </br></br>
-          One project was about using Neural Architecture Search for finding more brain-like models (<a href="https://arxiv.org/abs/1808.01405">Teacher Guided Architecture Search</a>). The idea is using Neural Architecture search to construct convolutional neural network architectures closer to the brain’s 'architecture'.
-          This can be done by comparing the representations of visual input at various depths in the brain and model using <a href="https://www.mrc-cbu.cam.ac.uk/people/nikolaus.kriegeskorte/rsa/">Representational dissimilarity matrices</a>.
-          Putting the simmilarity in the objective function steers the search into sampling more neural-like models.
-          Here I learned and research a ton about reinforcement learning, by testing and implementing state of the art reinforcement learning optimisation algorithms (<a href="https://openai.com/blog/openai-baselines-ppo/">PPO</a>, and <a href="https://link.springer.com/article/10.1007/BF00992696"> REINFORCE</a>) to make the search more efficient.
-          </br></br>
-          The other project was using Neural Architecture Search for finding and analysing recurrent, and efficient cells for object recognition.
-          This project was designed to steer the search into more parameter-sparse models by rewarding parameter sparsity in the optimizer's objective function.
-          The model space we searched in were Cells of recurrent models (RNNs) for image recognition. Common implementations of these cells are <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM and GRU cells</a>.
-        </h6>
+      <div class=" twelve columns" >
+        <div class="six columns">
+          <h5 > Multi Spectral Vision and image recognition on iOS  </h5>
+          <h6 style="margin-top:0%;align:justify;">
+            At Plant Vision we developed a demo to show our capabilities with infrared detection on the iPhone, and embedding neural networks in an iOS app to using image recognition.
+            </br></br>
+            This was all put together with the FLIR SDK, tensorflow-hub for transfer learning to custom categories, and ML-Core for embedding. All was glued together in Swift and Objective-C. 
+            
+          </h6>
+        </div>
+        <div class="six colums">
+          <iframe width="50%" height="315" src="https://www.youtube.com/embed/0wcPZZdZIg0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
       </div>
-      <div class="six colums">
-        <img style="margin-top:7%" src="images/ML/sage.png" width="50%" alt="hello">
-        <img style="margin-top:2%" src="images/ML/GrassResearc.png" width="50%" alt="hello">
+
+      <div class=" twelve columns" >
+        <div class="six columns">
+          <h5 > Reinforcement Learning / Neural Architecture Search </h5>
+          <h6 style="margin-top:0%;align:justify;">
+            For two semesters I did neuroscience/Machine-Learning research at MIT’s <a href="http://dicarlolab.mit.edu/">DiCarlo lab</a>. They specialise in a computational model approach to study the brain’s visual system. I was Supervised by prof. J. DiCarlo, dr. P. Bashivan and dr. J. Kubilius, in two projects:
+            </br></br>
+            One project was about using Neural Architecture Search for finding more brain-like models (<a href="https://arxiv.org/abs/1808.01405">Teacher Guided Architecture Search</a>). The idea is using Neural Architecture search to construct convolutional neural network architectures closer to the brain’s 'architecture'.
+            This can be done by comparing the representations of visual input at various depths in the brain and model using <a href="https://www.mrc-cbu.cam.ac.uk/people/nikolaus.kriegeskorte/rsa/">Representational dissimilarity matrices</a>.
+            Putting the simmilarity in the objective function steers the search into sampling more neural-like models.
+            Here I learned and research a ton about reinforcement learning, by testing and implementing state of the art reinforcement learning optimisation algorithms (<a href="https://openai.com/blog/openai-baselines-ppo/">PPO</a>, and <a href="https://link.springer.com/article/10.1007/BF00992696"> REINFORCE</a>) to make the search more efficient.
+            </br></br>
+            The other project was using Neural Architecture Search for finding and analysing recurrent, and efficient cells for object recognition.
+            This project was designed to steer the search into more parameter-sparse models by rewarding parameter sparsity in the optimizer's objective function.
+            The model space we searched in were Cells of recurrent models (RNNs) for image recognition. Common implementations of these cells are <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM and GRU cells</a>.
+          </h6>
+        </div>
+        <div class="six colums">
+          <img style="margin-top:7%" src="images/ML/sage.png" width="50%" alt="hello">
+          <img style="margin-top:2%" src="images/ML/GrassResearc.png" width="50%" alt="hello">
+        </div>
       </div>
-    </div>
 
   </div>
 
