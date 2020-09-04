@@ -24,16 +24,23 @@
 - Media Queries
 */
 
+
 .dimmed {
   opacity: 0.5;
 }
 
 turqoise {
-  color: turquoise;
+  color: white;
+}
+
+.blogTitle {
+  color: rgb(207, 206, 206);
+  font-weight: 500;
+
 }
 
 #link {
-  color: black;
+  color: white;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   transition: 0.7s;
@@ -49,13 +56,13 @@ turqoise {
 }
 
 #link2 {
-  color: black;
+  color: white;
   text-decoration: none;
   font-family: "Baskerville", sans-serif;
 }
 
 #link:hover {
-  color: turquoise;
+  color: white;
   transition: 0.7s;
   -webkit-transition: 0.7s;
   -moz-transition: 0.7s;
@@ -88,16 +95,16 @@ turqoise {
 /* Set a specific color for each brand */
 
 .fa-twitter {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
 }
 .fa-github {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
 }
 .fa-instagram {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
 }
 
 /* fade in start
@@ -169,6 +176,7 @@ div {
   margin: 0 auto;
   padding: 0px;
   box-sizing: border-box;
+  background:black;
 }
 .column,
 .columns {
@@ -324,7 +332,7 @@ body {
   font-weight: 100;
   font-family: "Roboto", sans-serif;
 
-  color: #555;
+  color:darkgrey;
 }
 
 /* Typography

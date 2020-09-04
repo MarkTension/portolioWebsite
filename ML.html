@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background:black">
 <head>
 
   <!-- load script
@@ -45,16 +45,16 @@
   <div class="container">
 
     <!-- welcome ––––––––––––––––––––––––– -->
-    <div class="row" align="right" style="margin-top:5%;margin-bottom:0%;">
+    <div class="row" align="center" style="margin-top:5%;margin-bottom:0%;">
         <a id="link2" href= "index.html"><h3>MarkTension</h3></a>
 
     </div>
     <div class="row">
       <div class="twelve columns fade" style="margin-top: 5%">
         <center>
-          <a  href= "ML.html"><img style="margin-bottom:0%"  src="images/intro/actmax0.png" alt="icon" width="20%" opacity="1"></a>
-          <a  href= "Music.html"><img style="margin-bottom:2%" class="dimmed" src="images/intro/actmax5.png" alt="icon" width="20%" opacity="0.5"></a>
-          <a  href= "other.html"><img style="margin-bottom:6%"  class="dimmed" src="images/intro/actmax2.png" alt="icon" width="20%";></a>
+          <a  href= "ML.html"><img style="margin-bottom:0%"  src="images/tree1.png" alt="icon" width="20%" opacity="1"></a>
+          <a  href= "Music.html"><img style="margin-bottom:3%" class="dimmed" src="images/tree2.png" alt="icon" width="20%" opacity="0.5"></a>
+          <a  href= "other.html"><img style="margin-bottom:6%"  class="dimmed" src="images/tree3.png" alt="icon" width="20%";></a>
           <center>
 
       </div>
@@ -64,107 +64,145 @@
     <!-- menu row  –––––––––––––––––––––––––  -->
      <div class="row" >
 
-      <!-- photo  ––––––––––––––––––––––––– -->
-      <div class="four columns fade" > <center> <a id="link" href= "ML.html"> <h4 style="margin-top:15%" >MachineLearning </h4> </a> </center>
+        <div class="four columns fade" > <center> <a id="link" href= "ML.html"> <h4 style="margin-top:6%" >MachineLearning </h4> </a> </center>
+        </div>
+        <div class="four columns fade" > <center> <a id="link" href= "Music.html"> <h4 style="margin-top:3%">Music</h4> </a></center>
+        </div>
+        <div class="four columns fade" > <center> <a id="link" href="other.html"> <h4 style="margin-top:0%">Other</h4> </a></center>
+        </div>
       </div>
 
-    <!--  music ––––––––––––––––––––––––– -->
+    <!-- body content  –––––––––––––––––––––––––  -->
 
+      <div class=" twelve columns" style="padding-left: 5%;padding-right:5%">
+        <div class=" twelve columns" align="left" >
+            <h5 class="blogTitle" > Synchronization in dynamical systems: Fireflies </h5>
+            <h6 style="margin-top:0%;align-content:justify;">
+              A long-term goal is having a music code library/toolkit containing algorithms that simulate complex systems. 
+              The current work is a first step twoards that.
+            </br></br>
 
-    <!-- word –––––––––––––––––––––-–––– -->
-    <div class="four columns fade" > <center> <a id="link" href= "Music.html"> <h4 style="margin-top:10%">Music</h4> </a></center>
-    </div>
-    
-    <div class="four columns fade" > <center> <a id="link" href="other.html"> <h4 style="margin-top:0%">Other</h4> </a></center>
-    </div>
-    </div>
-    <div class=" twelve columns" align="left" style="margin-left: 20%,margin-right: 20%">
-        <h5 > 2D & 3D sculpting with Unity </h5>
-        <h6 style="margin-top:0%;align:justify;">
-          As an ML-researcher/artist at Onformative, Berlin, I'm working on a 3D digital sculpting project in Unity3D.
-          We're using reinforcement learning, enabled in Unity via its ml-agents library, to train an agent to creatively remove parts of a block to get to a desired outcome.
-          The final version will have the agent using different tool shapes which will result in different aesthetics.
-        </h6>
+              Firefly-synchronization is a biological phenomenon in which the emission of flashes starts of randomly, and over the course of a night synchronizes.
+              This means that the firing of different fireflies gets correlated over time until the firing of all flies happens in synchrony.
+            </br></br>
 
-      <div class="twelve columns" style="margin-bottom:0%">     
-        <img style="margin-top:0%" height="315"  align="center" src="images/ML/handFastGif.gif" width="50%" alt="hello">
+              This phenomenon has been studied by biologists and mathematicians, which resulted in multiple papers with mathematical models decribing it.
+              The paper I used for reference was called <a href="http://www.cs.unibo.it/babaoglu/courses/cas06-07/papers/pdf/fireflies.pdf">Firefly-inspired Heartbeat Synchronization in Overlay Networks</a>.
+              The algorithm described is the ermentraut algorithm, which adjusts the firing frequence of each fly depending on firing behavior of its neighbors. 
 
-        <iframe width="50%" height="315" align="right" src="https://www.youtube.com/embed/vJuxmydJQP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="twelve columns" style="margin-bottom:10%">     
-        <iframe width="50%" height="315" src="https://www.youtube.com/embed/h7aKyZKOP04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+              The article presented a continuous-time approach, so it took some modifications to make it work in a discrete-time setting.
+              However, implementing it into python code, gave quite a nice result. 
+            A result of a synchronization run with 800 fireflies is plotted on the graph below. Each blue dot is a flash event from firefly ID (y-axis) on time in seconds (x-axis).
+            As you can see, the simulation converges into a synchronous firing within ~10 seconds.
 
-    </div>
-    <div class=" twelve columns" >
-      <div class="six columns">
-        <h5 > Visualizing image recogntion models' representations </h5>
-        <h6 style="margin-top:0%;align:justify;">
-          The biggest critique of using <a href="https://en.wikipedia.org/wiki/Deep_learning">deep neural networks</a> as models in science is that we don't know how exactly they compute.
-          They're being called black box models for that reason. e.g. understanding a black box like the brain with another black box is not useful.
-          However, various attempts have been made to get a better understanding of it, by presenting images, and visualizing the representations in different layers.
-          One other way to do this is synthesizing input images by using gradient-ascent to maximise classification score on a selected class, filter, or neuron.
-          This is called <a href="https://pdfs.semanticscholar.org/65d9/94fb778a8d9e0f632659fb33a082949a50d3.pdf">Activation Maximization</a>.
-          To play with that, I used CIFAR10 to train a CNN and applied activatin maximization on it.
           </br></br>
-          My results are visualizations of maximizing the classification of specific classes on Cifar10.
-          I did get some good ones that looked like the various categories I was trying to visualize.
-          However, after playing a bit more with it I got some unexpected results, displayed on the right.
+            I've already managed to connect firing events into my midi port with python's mido midi library.
+            Below is an example audio file made from synchronizing while also lowering the natural firing frequency over the course of a simulation, which results in some pretty interesting path towards a slow synchronization at the end.
           </br></br>
+          Next step is making fireflies reactive to other inputs (from e.g. other Ableton midi instruments). Also converting our python code into a Javascript Max for Live device is on the planning.
+          The code can be found <a href="https://github.com/MarkTension/FireflySimulationErmentraut"> on my github.</a> 
 
-          A lot of the work is playing with different regularization techniques on updates to the synthetic input image.
-          Stronger natural image priors are necessary to produce better visualizations with this gradient ascent technique.
-          Playing around means adjusting the amount of the regularizations available.
-          L2 regularization helped a lot, but I found that higher degrees of gaussian regularization (used in <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Mahendran_Understanding_Deep_Image_2015_CVPR_paper.html">this paper</a> to correlate pixels more with another)
-          gave a really cool aesthetic to the output. It's all about finding the balance.
-          My results were a bit overdone on the regularization-end.</br></br>
-          I was quite surprised how the results didn't contain any strong features of the category they represented, yet they're rather beautiful.
-          Another way to describe this is making <a href="https://openai.com/blog/adversarial-example-research/">adversarials</a> pretty.
-        </h6>
-      </div>
-      <div class="six colums">
-        <img style="margin-top:7%" src="images/intro/actmax0.png" width="15%" alt="hello">
-        <img style="margin-top:2%" src="images/intro/actmax3.png" width="15%" alt="hello">
-        <img style="margin-top:2%" src="images/intro/actmax4.png" width="15%" alt="hello">
-      </div>
+          </br></br>
+          <audio controls>
+              <source src="images/ML/syncExample.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
 
-      <div class=" twelve columns" >
-        <div class="six columns">
-          <h5 > Multi Spectral Vision and image recognition on iOS  </h5>
-          <h6 style="margin-top:0%;align:justify;">
-            At Plant Vision we developed a demo to show our capabilities with infrared detection on the iPhone, and embedding neural networks in an iOS app to using image recognition.
-            </br></br>
-            This was all put together with the FLIR SDK, tensorflow-hub for transfer learning to custom categories, and ML-Core for embedding. All was glued together in Swift and Objective-C. 
-            
-          </h6>
+            </h6>
+
+          <div class="twelve columns" style="margin-bottom:0%">     
+            <img style="margin-top:0%"  src="images/ML/fireflySync.png" width="100%" alt="hello">
+
+          </div>
+          
+          <div class=" twelve columns" align="left" >
+            <hr>
+            <h5 class="blogTitle" > 2D & 3D sculpting with Unity </h5>
+            <h6 style="margin-top:0%;align-content:justify;">
+              As an ML-researcher/artist at Onformative, Berlin, I'm working on a 3D digital sculpting project in Unity3D.
+              We're using reinforcement learning, enabled in Unity via its ml-agents library, to train an agent to creatively remove parts of a block to get to a desired outcome.
+              The final version will have the agent using different tool shapes which will result in different aesthetics.
+            </h6>
+
+          <div class="twelve columns" style="margin-bottom:0%">     
+            <img style="margin-top:0%" height="200"   src="images/ML/handFastGif.gif" width="30%" alt="hello">
+            <iframe width="30%" height="200"  src="https://www.youtube.com/embed/vJuxmydJQP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="30%" height="200" src="https://www.youtube.com/embed/h7aKyZKOP04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+
+          </div>
+
+        <div class=" twelve columns" >
+          <hr>
+          <div class="twelve columns">
+            <h5 class="blogTitle"> Visualizing image recogntion models' representations </h5>
+            <h6 style="margin-top:0%;align:justify;">
+              The biggest critique of using <a href="https://en.wikipedia.org/wiki/Deep_learning">deep neural networks</a> as models in science is that we don't know how exactly they compute.
+              They're being called black box models for that reason. e.g. understanding a black box like the brain with another black box is not useful.
+              However, various attempts have been made to get a better understanding of it, by presenting images, and visualizing the representations in different layers.
+              One other way to do this is synthesizing input images by using gradient-ascent to maximise classification score on a selected class, filter, or neuron.
+              This is called <a href="https://pdfs.semanticscholar.org/65d9/94fb778a8d9e0f632659fb33a082949a50d3.pdf">Activation Maximization</a>.
+              To play with that, I used CIFAR10 to train a CNN and applied activatin maximization on it.
+              </br></br>
+              My results are visualizations of maximizing the classification of specific classes on Cifar10.
+              I did get some good ones that looked like the various categories I was trying to visualize.
+              However, after playing a bit more with it I got some unexpected results, displayed on the right.
+              </br></br>
+
+              A lot of the work is playing with different regularization techniques on updates to the synthetic input image.
+              Stronger natural image priors are necessary to produce better visualizations with this gradient ascent technique.
+              Playing around means adjusting the amount of the regularizations available.
+              L2 regularization helped a lot, but I found that higher degrees of gaussian regularization (used in <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Mahendran_Understanding_Deep_Image_2015_CVPR_paper.html">this paper</a> to correlate pixels more with another)
+              gave a really cool aesthetic to the output. It's all about finding the balance.
+              My results were a bit overdone on the regularization-end.</br></br>
+              I was quite surprised how the results didn't contain any strong features of the category they represented, yet they're rather beautiful.
+              Another way to describe this is making <a href="https://openai.com/blog/adversarial-example-research/">adversarials</a> pretty.
+            </h6>
+          </div>
+          <div class="twelve colums">
+            <center>
+            <img style="margin-top:7%" src="images/intro/actmax0.png" width="20%" alt="hello">
+            <img style="margin-top:2%" src="images/intro/actmax3.png" width="20%" alt="hello">
+            <img style="margin-top:2%" src="images/intro/actmax4.png" width="20%" alt="hello">
+          </center>
+          </div>
+
+          <div class=" twelve columns" >
+            <hr>
+              <h5 class="blogTitle"> Multi Spectral Vision and image recognition on iOS  </h5>
+              <h6 style="margin-top:0%;align:justify;">
+                At Plant Vision we developed a demo to show our capabilities with infrared detection on the iPhone, and embedding neural networks in an iOS app to using image recognition.
+                </br></br>
+                This was all put together with the FLIR SDK, tensorflow-hub for transfer learning to custom categories, and ML-Core for embedding. All was glued together in Swift and Objective-C. 
+                
+              </h6>
+              <center>
+              
+              <iframe width="50%" height="315" src="https://www.youtube.com/embed/0wcPZZdZIg0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </center>
+
+            </div>
+          </div>
+
+          <div class=" twelve columns" >
+            <hr>
+              <h5 class="blogTitle"> Reinforcement Learning / Neural Architecture Search </h5>
+              <h6 style="margin-top:0%;align:justify;">
+                For two semesters I did neuroscience/Machine-Learning research at MIT’s <a href="http://dicarlolab.mit.edu/">DiCarlo lab</a>. They specialise in a computational model approach to study the brain’s visual system. I was Supervised by prof. J. DiCarlo, dr. P. Bashivan and dr. J. Kubilius, in two projects:
+                </br></br>
+                One project was about using Neural Architecture Search for finding more brain-like models (<a href="https://arxiv.org/abs/1808.01405">Teacher Guided Architecture Search</a>). The idea is using Neural Architecture search to construct convolutional neural network architectures closer to the brain’s 'architecture'.
+                This can be done by comparing the representations of visual input at various depths in the brain and model using <a href="https://www.mrc-cbu.cam.ac.uk/people/nikolaus.kriegeskorte/rsa/">Representational dissimilarity matrices</a>.
+                Putting the simmilarity in the objective function steers the search into sampling more neural-like models.
+                Here I learned and research a ton about reinforcement learning, by testing and implementing state of the art reinforcement learning optimisation algorithms (<a href="https://openai.com/blog/openai-baselines-ppo/">PPO</a>, and <a href="https://link.springer.com/article/10.1007/BF00992696"> REINFORCE</a>) to make the search more efficient.
+                </br></br>
+                The other project was using Neural Architecture Search for finding and analysing recurrent, and efficient cells for object recognition.
+                This project was designed to steer the search into more parameter-sparse models by rewarding parameter sparsity in the optimizer's objective function.
+                The model space we searched in were Cells of recurrent models (RNNs) for image recognition. Common implementations of these cells are <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM and GRU cells</a>.
+              </h6>
+              <center>
+              <img style="margin-top:7%" src="images/ML/sage.png" width="40%" alt="hello">
+              <img style="margin-top:2%" src="images/ML/GrassResearc.png" width="40%" alt="hello"></center>
         </div>
-        <div class="six colums">
-          <iframe width="50%" height="315" src="https://www.youtube.com/embed/0wcPZZdZIg0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </div>
       </div>
-
-      <div class=" twelve columns" >
-        <div class="six columns">
-          <h5 > Reinforcement Learning / Neural Architecture Search </h5>
-          <h6 style="margin-top:0%;align:justify;">
-            For two semesters I did neuroscience/Machine-Learning research at MIT’s <a href="http://dicarlolab.mit.edu/">DiCarlo lab</a>. They specialise in a computational model approach to study the brain’s visual system. I was Supervised by prof. J. DiCarlo, dr. P. Bashivan and dr. J. Kubilius, in two projects:
-            </br></br>
-            One project was about using Neural Architecture Search for finding more brain-like models (<a href="https://arxiv.org/abs/1808.01405">Teacher Guided Architecture Search</a>). The idea is using Neural Architecture search to construct convolutional neural network architectures closer to the brain’s 'architecture'.
-            This can be done by comparing the representations of visual input at various depths in the brain and model using <a href="https://www.mrc-cbu.cam.ac.uk/people/nikolaus.kriegeskorte/rsa/">Representational dissimilarity matrices</a>.
-            Putting the simmilarity in the objective function steers the search into sampling more neural-like models.
-            Here I learned and research a ton about reinforcement learning, by testing and implementing state of the art reinforcement learning optimisation algorithms (<a href="https://openai.com/blog/openai-baselines-ppo/">PPO</a>, and <a href="https://link.springer.com/article/10.1007/BF00992696"> REINFORCE</a>) to make the search more efficient.
-            </br></br>
-            The other project was using Neural Architecture Search for finding and analysing recurrent, and efficient cells for object recognition.
-            This project was designed to steer the search into more parameter-sparse models by rewarding parameter sparsity in the optimizer's objective function.
-            The model space we searched in were Cells of recurrent models (RNNs) for image recognition. Common implementations of these cells are <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">LSTM and GRU cells</a>.
-          </h6>
-        </div>
-        <div class="six colums">
-          <img style="margin-top:7%" src="images/ML/sage.png" width="50%" alt="hello">
-          <img style="margin-top:2%" src="images/ML/GrassResearc.png" width="50%" alt="hello">
-        </div>
-      </div>
-
   </div>
 
 
