@@ -94,18 +94,11 @@ turqoise {
 
 /* Set a specific color for each brand */
 
-.fa-twitter {
+.fa-all {
   background: black;
   color: white;
 }
-.fa-github {
-  background: black;
-  color: white;
-}
-.fa-instagram {
-  background: black;
-  color: white;
-}
+
 
 /* fade in start
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
