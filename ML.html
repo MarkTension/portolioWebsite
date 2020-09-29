@@ -52,9 +52,9 @@
     <div class="row">
       <div class="twelve columns fade" style="margin-top: 5%">
         <center>
-          <a  href= "ML.html"><img style="margin-bottom:0%"  src="images/tree1.png" alt="icon" width="20%" opacity="1"></a>
-          <a  href= "Music.html"><img style="margin-bottom:3%" class="dimmed" src="images/tree2.png" alt="icon" width="20%" opacity="0.5"></a>
-          <a  href= "other.html"><img style="margin-bottom:6%"  class="dimmed" src="images/tree3.png" alt="icon" width="20%";></a>
+          <a  href= "ML.html"><img style="margin-bottom:0%"  src="images/tree1s.png" alt="icon" width="20%" opacity="1"></a>
+          <a  href= "Music.html"><img style="margin-bottom:3%" class="dimmed" src="images/tree2s.png" alt="icon" width="20%" opacity="0.5"></a>
+          <a  href= "other.html"><img style="margin-bottom:6%"  class="dimmed" src="images/tree3s.png" alt="icon" width="20%";></a>
           <center>
 
       </div>
@@ -79,28 +79,27 @@
             <h5 class="blogTitle" > Synchronization in dynamical systems: Fireflies </h5>
             <h6 style="margin-top:0%;align-content:justify;">
               A long-term goal is having a music code library/toolkit containing algorithms that simulate complex systems. 
-              The current work is a first step twoards that.
+              The current work is a first step.
             </br></br>
 
               Firefly-synchronization is a biological phenomenon in which the emission of flashes starts of randomly, and over the course of a night synchronizes.
-              This means that the firing of different fireflies gets correlated over time until the firing of all flies happens in synchrony.
+              Firing correlates over time culminating into synchrony.
             </br></br>
 
               This phenomenon has been studied by biologists and mathematicians, which resulted in multiple papers with mathematical models decribing it.
               The paper I used for reference was called <a href="http://www.cs.unibo.it/babaoglu/courses/cas06-07/papers/pdf/fireflies.pdf">Firefly-inspired Heartbeat Synchronization in Overlay Networks</a>.
-              The algorithm described is the ermentraut algorithm, which adjusts the firing frequence of each fly depending on firing behavior of its neighbors. 
+              The algorithm described is the Ermentraut algorithm, which adjusts the firing frequence of each fly depending on firing behavior of its neighbors. 
 
-              The article presented a continuous-time approach, so it took some modifications to make it work in a discrete-time setting.
-              However, implementing it into python code, gave quite a nice result. 
-            A result of a synchronization run with 800 fireflies is plotted on the graph below. Each blue dot is a flash event from firefly ID (y-axis) on time in seconds (x-axis).
-            As you can see, the simulation converges into a synchronous firing within ~10 seconds.
+              Implementing it into python code, gave quite a nice result. 
+              A result of a synchronization run with 800 fireflies is plotted on the graph below. Each blue dot is a flash event from firefly ID (y-axis) on time in seconds (x-axis).
+              As you can see, the simulation converges into a synchronous firing within ~10 seconds.
 
           </br></br>
-            I've already managed to connect firing events into my midi port with python's mido midi library.
+            Firing events are transformed to midi signal and ported with python's mido midi library into Ableton.
             Below is an example audio file made from synchronizing while also lowering the natural firing frequency over the course of a simulation, which results in some pretty interesting path towards a slow synchronization at the end.
           </br></br>
           Next step is making fireflies reactive to other inputs (from e.g. other Ableton midi instruments). Also converting our python code into a Javascript Max for Live device is on the planning.
-          The code can be found <a href="https://github.com/MarkTension/FireflySimulationErmentraut"> on my github.</a> 
+          Code can be found <a href="https://github.com/MarkTension/FireflySimulationErmentraut"> on my github.</a> 
 
           </br></br>
           <audio controls>
@@ -120,16 +119,22 @@
             <h5 class="blogTitle" > 2D & 3D sculpting with Unity </h5>
             <h6 style="margin-top:0%;align-content:justify;">
               As an ML-researcher/artist at Onformative, Berlin, I'm working on a 3D digital sculpting project in Unity3D.
-              We're using reinforcement learning, enabled in Unity via its ml-agents library, to train an agent to creatively remove parts of a block to get to a desired outcome.
+              We're using reinforcement learning, enabled in <a href="https://unity.com/">Unity3D</a> via its <a href="https://github.com/Unity-Technologies/ml-agents">ml-agents</a>  machine learning library, to train our sculpting agent to creatively sculpt complex shapes from a block.
+              The agent uses a combination of engineered sensors and visual input to get a good idea of the partially observable environment.
               The final version will have the agent using different tool shapes which will result in different aesthetics.
             </h6>
 
-          <div class="twelve columns" style="margin-bottom:0%">     
-            <img style="margin-top:0%" height="200"   src="images/ML/handFastGif.gif" width="30%" alt="hello">
-            <iframe width="30%" height="200"  src="https://www.youtube.com/embed/vJuxmydJQP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="30%" height="200" src="https://www.youtube.com/embed/h7aKyZKOP04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+          <div class="twelve columns" style="margin-bottom:0%">    <center>
+            <div class="six columns" style="margin-bottom:0%">            <img style="margin-top:0%"  src="images/ML/clayBasic1.png" width="100%" alt="hello">
+            </div>
+            <div class="six columns" style="margin-bottom:0%">            <img style="margin-top:0%"  src="images/ML/clayBasic2.png" width="100%" alt="hello">
+            </div>
 
-          </div>
+            <!-- <img style="margin-top:0%" height="200"   src="images/ML/handFastGif.gif" width="30%" alt="hello">
+            <iframe width="30%" height="200"  src="https://www.youtube.com/embed/vJuxmydJQP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="30%" height="200" src="https://www.youtube.com/embed/h7aKyZKOP04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       -->
+            <iframe width="80%" height="800" src="https://www.youtube.com/embed/QYWhmFz4uPM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </center> </div>
 
         <div class=" twelve columns" >
           <hr>

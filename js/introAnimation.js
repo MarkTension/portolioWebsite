@@ -32,7 +32,6 @@ $(document).ready(function() {
       var timeInt = Math.round(event.time * 4) % 8;
       text.content = textList[timeInt];
 
-      console.log(timeInt);
       //raster0.rotate(1.5);
       for (var i = 0; i <= 6; i++) {
         // A cylic value between -1 and 1
