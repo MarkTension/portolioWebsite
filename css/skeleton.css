@@ -29,8 +29,12 @@
   opacity: 0.5;
 }
 
+a{
+  color: turquoise;
+}
+
 turqoise {
-  color: white;
+  color: turquoise;
 }
 
 .blogTitle {
@@ -40,7 +44,7 @@ turqoise {
 }
 
 #link {
-  color: white;
+  color: turquoise;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   transition: 0.7s;
@@ -56,7 +60,7 @@ turqoise {
 }
 
 #link2 {
-  color: white;
+  color: turquoise;
   text-decoration: none;
   font-family: "Baskerville", sans-serif;
 }
